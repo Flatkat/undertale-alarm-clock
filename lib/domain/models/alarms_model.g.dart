@@ -46,7 +46,6 @@ class AlarmsModelAdapter extends TypeAdapter<AlarmsModel> {
       ..writeByte(6)
       ..write(obj.isActive);
   }
-  
 
   @override
   int get hashCode => typeId.hashCode;
