@@ -29,7 +29,7 @@ class _AppDrawerState extends State<AppDrawer> {
     await showDialog(
       context: context,
       builder: (BuildContext context) => AlertDialog(
-        title: Text(text, style: Theme.of(context).textTheme.subtitle1),
+        title: Text(text, style: Theme.of(context).textTheme.titleMedium),
         actions: <Widget>[
           ElevatedButton(
             onPressed: () => Navigator.of(context).pop(),
@@ -74,7 +74,7 @@ class _AppDrawerState extends State<AppDrawer> {
                   leading: SizedBox(width: 40, child: appIcon),
                   subtitle: Text('Version ${snapshot.data!.version}'),
                   title: Text(snapshot.data!.appName,
-                      style: Theme.of(context).textTheme.subtitle1),
+                      style: Theme.of(context).textTheme.titleMedium),
                 );
               } else {
                 return const SizedBox.shrink();

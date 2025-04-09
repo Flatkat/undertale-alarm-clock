@@ -54,7 +54,7 @@ class AlarmService {
       }
 
       await alarmsBox!.close();
-      FlutterRingtonePlayer.playAlarm(volume: _volume);
+      FlutterRingtonePlayer().playAlarm(volume: _volume);
 
       // Conversation between the isolates
       final ReceivePort receiver = ReceivePort();
@@ -70,7 +70,7 @@ class AlarmService {
         (dynamic message) async {
           if (message == 'stop') {
             debugPrint('stoping the rigntone player');
-            await FlutterRingtonePlayer.stop();
+            await FlutterRingtonePlayer().stop();
             receiver.close();
           }
         },
@@ -108,7 +108,7 @@ class AlarmService {
       model.setAt = model.at.add(const Duration(days: 1));
 
       await alarmsBox!.close();
-      FlutterRingtonePlayer.playAlarm(volume: _volume);
+      FlutterRingtonePlayer().playAlarm(volume: _volume);
 
       // Conversation between the isolates
       final ReceivePort receiver = ReceivePort();
@@ -124,7 +124,7 @@ class AlarmService {
         (dynamic message) async {
           if (message == 'stop') {
             debugPrint('stoping the rigntone player');
-            await FlutterRingtonePlayer.stop();
+            await FlutterRingtonePlayer().stop();
             receiver.close();
           }
         },

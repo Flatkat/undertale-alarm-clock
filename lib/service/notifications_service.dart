@@ -42,23 +42,26 @@ class NotificationService {
       const InitializationSettings(
         android: AndroidInitializationSettings('@mipmap/ic_launcher'),
       ),
-      onSelectNotification: (String? payload) async {
-        debugPrint(payload);
-      },
-    );
+        onDidReceiveNotificationResponse: (NotificationResponse notificationResponse) async {
+          final String? payload = notificationResponse.payload;
+          if (notificationResponse.payload != null) {
+            debugPrint('notification payload: $payload');
+          }
+        }
+          );
 
     _notificationStatic.initialize(
       const InitializationSettings(
         android: AndroidInitializationSettings('@mipmap/ic_launcher'),
       ),
-      onSelectNotification: (String? payload) async {
-        IsolateNameServer.lookupPortByName(portName)?.send('stop');
-        if (payload != null && int.tryParse(payload) != null) {
-          final int id = int.parse(payload);
-
-          _notificationStatic.cancel(id);
+        onDidReceiveNotificationResponse: (NotificationResponse notificationResponse) async {
+          final String? payload = notificationResponse.payload;
+          IsolateNameServer.lookupPortByName(portName)?.send('stop');
+          if (notificationResponse.payload != null) {
+            final int id = int.parse(payload!);
+            _notificationStatic.cancel(id);
+          }
         }
-      },
     );
   }
 

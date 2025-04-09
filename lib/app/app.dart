@@ -94,7 +94,7 @@ class _AppState extends State<App> with SingleTickerProviderStateMixin {
                                     tabName,
                                     style: Theme.of(context)
                                         .textTheme
-                                        .subtitle2!
+                                        .titleSmall!
                                         .copyWith(
                                             fontWeight: FontWeight.w600,
                                             letterSpacing: 1,

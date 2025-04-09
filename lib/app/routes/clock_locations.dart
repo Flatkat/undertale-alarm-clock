@@ -90,7 +90,7 @@ class _ClockLocationsState extends State<ClockLocations> {
                         : null,
                 child: Text(
                   'SELECT THIS CITY',
-                  style: Theme.of(context).textTheme.subtitle2!.copyWith(
+                  style: Theme.of(context).textTheme.titleSmall!.copyWith(
                       fontWeight: FontWeight.w600, color: Colors.white),
                 ))
           ],
@@ -116,7 +116,7 @@ class _ClockLocationsState extends State<ClockLocations> {
                       ? removeModels
                       : null,
                   child: Text('Remove',
-                      style: Theme.of(context).textTheme.subtitle2!.copyWith(
+                      style: Theme.of(context).textTheme.titleSmall!.copyWith(
                           fontWeight: FontWeight.w600, color: Colors.white)))
             ],
           );
@@ -138,7 +138,8 @@ class _ClockLocationsState extends State<ClockLocations> {
           toolbarHeight: 64.0,
           title: Column(
             children: <Widget>[
-              Text('Select City', style: Theme.of(context).textTheme.headline5),
+              Text('Select City',
+                  style: Theme.of(context).textTheme.headlineSmall),
               Text('Time zones',
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                         fontWeight: FontWeight.w600,

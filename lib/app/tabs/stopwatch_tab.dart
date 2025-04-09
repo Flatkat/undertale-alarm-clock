@@ -94,7 +94,7 @@ class _StopwatchTabState extends State<StopwatchTab>
                     !_stopWatchContext.isWatchTicking ? 'START' : 'PAUSE',
                     style: Theme.of(context)
                         .textTheme
-                        .subtitle1!
+                        .titleMedium!
                         .copyWith(color: Colors.white),
                   )),
               ElevatedButton(
@@ -105,7 +105,7 @@ class _StopwatchTabState extends State<StopwatchTab>
                     _stopWatchContext.isStopWatchRunning ? _onReset : null,
                 child: Text(
                   !_stopWatchContext.isWatchTicking ? 'RESET' : 'LAP',
-                  style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                  style: Theme.of(context).textTheme.titleMedium!.copyWith(
                         color: !_stopWatchContext.isStopWatchRunning
                             ? Colors.black
                             : Colors.white,

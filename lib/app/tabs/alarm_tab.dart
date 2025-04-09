@@ -52,7 +52,7 @@ class _AlarmTabState extends State<AlarmTab> {
                             dimension: size.width * .4, child: alarmImage),
                         const SizedBox(height: 20),
                         Text('No alarms'.toUpperCase(),
-                            style: Theme.of(context).textTheme.subtitle1)
+                            style: Theme.of(context).textTheme.titleMedium)
                       ],
                     ),
                   ),

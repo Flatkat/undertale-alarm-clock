@@ -123,7 +123,7 @@ class _AddAlarmState extends State<AddAlarm> {
             Text('Add Alarm',
                 style: Theme.of(context)
                     .textTheme
-                    .subtitle1!
+                    .titleMedium!
                     .copyWith(fontWeight: FontWeight.bold)),
             Text(_relative)
           ],
@@ -148,7 +148,7 @@ class _AddAlarmState extends State<AddAlarm> {
                   'Hour',
                   style: Theme.of(context)
                       .textTheme
-                      .subtitle1!
+                      .titleMedium!
                       .copyWith(fontWeight: FontWeight.w600, wordSpacing: 1.2),
                 ),
                 const SizedBox(width: 40),
@@ -156,7 +156,7 @@ class _AddAlarmState extends State<AddAlarm> {
                   'Minute',
                   style: Theme.of(context)
                       .textTheme
-                      .subtitle1!
+                      .titleMedium!
                       .copyWith(fontWeight: FontWeight.w600, wordSpacing: 1.2),
                 )
               ],
@@ -167,11 +167,11 @@ class _AddAlarmState extends State<AddAlarm> {
               onTimeChange: _onTimeChange,
               normalTextStyle: Theme.of(context)
                   .textTheme
-                  .headline6!
+                  .titleLarge!
                   .copyWith(color: Colors.black54),
               highlightedTextStyle: Theme.of(context)
                   .textTheme
-                  .headline5!
+                  .headlineSmall!
                   .copyWith(fontWeight: FontWeight.bold, fontSize: 30),
               itemHeight: 80,
               isForce2Digits: true,
@@ -184,7 +184,7 @@ class _AddAlarmState extends State<AddAlarm> {
                     onTap: _showRepeatBottomSheet,
                     title: Text(
                       'Repeat',
-                      style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                      style: Theme.of(context).textTheme.titleMedium!.copyWith(
                           fontWeight: FontWeight.w600, wordSpacing: 1.2),
                     ),
                     trailing: Row(
@@ -201,8 +201,11 @@ class _AddAlarmState extends State<AddAlarm> {
                           setState(() => _isVibrate = !_isVibrate),
                       title: Text(
                         'Vibrate when alarm sounds',
-                        style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                            fontWeight: FontWeight.w600, wordSpacing: 1.2),
+                        style: Theme.of(context)
+                            .textTheme
+                            .titleMedium!
+                            .copyWith(
+                                fontWeight: FontWeight.w600, wordSpacing: 1.2),
                       )),
                   if (_repeat == RepeatEnum.once)
                     SwitchListTile(
@@ -213,7 +216,7 @@ class _AddAlarmState extends State<AddAlarm> {
                           'Delete after it goes off',
                           style: Theme.of(context)
                               .textTheme
-                              .subtitle1!
+                              .titleMedium!
                               .copyWith(
                                   fontWeight: FontWeight.w600,
                                   wordSpacing: 1.2),
@@ -222,13 +225,13 @@ class _AddAlarmState extends State<AddAlarm> {
                     onTap: _showLabelBottonSheet,
                     title: Text(
                       'Label',
-                      style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                      style: Theme.of(context).textTheme.titleMedium!.copyWith(
                           fontWeight: FontWeight.w600, wordSpacing: 1.2),
                     ),
                     trailing: _labelController.text.isEmpty
                         ? const Icon(Icons.chevron_right)
                         : Text(_labelController.text,
-                            style: Theme.of(context).textTheme.caption),
+                            style: Theme.of(context).textTheme.bodySmall),
                   ),
                 ],
               ),

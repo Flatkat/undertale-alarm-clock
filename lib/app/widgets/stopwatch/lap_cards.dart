@@ -42,7 +42,7 @@ class _StopWatchLapsCardState extends State<StopWatchLapsCard> {
                         fontWeight: FontWeight.w600, letterSpacing: 1.2)),
                 const SizedBox(height: 10),
                 Text(stopWatchFormat(widget.time),
-                    style: Theme.of(context).textTheme.headline6),
+                    style: Theme.of(context).textTheme.titleLarge),
               ],
             ),
             IconButton(

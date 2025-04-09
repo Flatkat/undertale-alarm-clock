@@ -17,7 +17,7 @@ class RepeatModePicker extends StatelessWidget {
               title: Text('Once',
                   style: Theme.of(context)
                       .textTheme
-                      .subtitle1!
+                      .titleMedium!
                       .copyWith(fontWeight: FontWeight.w600)),
             ),
             ListTile(
@@ -25,7 +25,7 @@ class RepeatModePicker extends StatelessWidget {
               title: Text('Daily',
                   style: Theme.of(context)
                       .textTheme
-                      .subtitle1!
+                      .titleMedium!
                       .copyWith(fontWeight: FontWeight.w600)),
             ),
           ],

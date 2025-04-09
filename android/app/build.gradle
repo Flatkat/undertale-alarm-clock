@@ -24,7 +24,7 @@ if (flutterVersionName == null) {
 
 android {
     compileSdkVersion 35
-    ndkVersion flutter.ndkVersion
+    ndkVersion = "27.0.12077973"
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -57,6 +57,7 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+    namespace 'com.eva.stopwatch'
 }
 
 flutter {

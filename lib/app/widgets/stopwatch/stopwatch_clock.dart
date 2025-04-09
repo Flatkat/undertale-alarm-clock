@@ -123,7 +123,7 @@ class _StopWatchClockState extends State<StopWatchClock>
           ),
           Text(
             stopWatchFormat(time),
-            style: Theme.of(context).textTheme.headline4!.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                   letterSpacing: 1.2,
                   fontWeight: FontWeight.bold,
                   // fontFamily: 'Technology',

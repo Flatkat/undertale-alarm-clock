@@ -18,11 +18,11 @@ ThemeData lightTheme = ThemeData(
   bottomAppBarTheme:
       const BottomAppBarTheme(elevation: 0, color: Colors.transparent),
   switchTheme: SwitchThemeData(
-    trackColor: MaterialStateProperty.resolveWith<Color?>(
-        (Set<MaterialState> states) => Colors.grey),
-    thumbColor: MaterialStateProperty.resolveWith<Color?>(
-        (Set<MaterialState> states) => states.contains(MaterialState.focused) ||
-                states.contains(MaterialState.selected)
+    trackColor: WidgetStateProperty.resolveWith<Color?>(
+        (Set<WidgetState> states) => Colors.grey),
+    thumbColor: WidgetStateProperty.resolveWith<Color?>(
+        (Set<WidgetState> states) => states.contains(WidgetState.focused) ||
+                states.contains(WidgetState.selected)
             ? Colors.black
             : Colors.transparent),
   ),
@@ -48,15 +48,15 @@ ThemeData lightTheme = ThemeData(
   ),
   tabBarTheme: TabBarTheme(
     splashFactory: NoSplash.splashFactory,
-    overlayColor: MaterialStateProperty.resolveWith<Color?>(
-        (Set<MaterialState> states) =>
-            states.contains(MaterialState.focused) ? null : Colors.transparent),
+    overlayColor: WidgetStateProperty.resolveWith<Color?>(
+        (Set<WidgetState> states) =>
+            states.contains(WidgetState.focused) ? null : Colors.transparent),
     indicator: const BoxDecoration(),
     labelPadding: EdgeInsets.zero,
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-    primary: Colors.black,
+    backgroundColor: Colors.black,
     elevation: 10,
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(15),
@@ -65,8 +65,8 @@ ThemeData lightTheme = ThemeData(
   drawerTheme: const DrawerThemeData(elevation: 0),
   floatingActionButtonTheme:
       const FloatingActionButtonThemeData(backgroundColor: Colors.black),
-  textButtonTheme:
-      TextButtonThemeData(style: TextButton.styleFrom(primary: Colors.black)),
+  textButtonTheme: TextButtonThemeData(
+      style: TextButton.styleFrom(foregroundColor: Colors.black)),
   dialogTheme: DialogTheme(
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(15),
@@ -94,16 +94,16 @@ ThemeData darkTheme = ThemeData(
   colorScheme: const ColorScheme.dark(),
   tabBarTheme: TabBarTheme(
     splashFactory: NoSplash.splashFactory,
-    overlayColor: MaterialStateProperty.resolveWith<Color?>(
-        (Set<MaterialState> states) =>
-            states.contains(MaterialState.focused) ? null : Colors.transparent),
+    overlayColor: WidgetStateProperty.resolveWith<Color?>(
+        (Set<WidgetState> states) =>
+            states.contains(WidgetState.focused) ? null : Colors.transparent),
     indicator: const BoxDecoration(),
     labelPadding: EdgeInsets.zero,
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
     textStyle: const TextStyle(color: Colors.black),
-    primary: Colors.white,
+    backgroundColor: Colors.white,
     elevation: 10,
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(15),

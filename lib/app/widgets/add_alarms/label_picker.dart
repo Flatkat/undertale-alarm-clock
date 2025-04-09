@@ -19,7 +19,7 @@ class LabelPicker extends StatelessWidget {
               'Label',
               style: Theme.of(context)
                   .textTheme
-                  .subtitle1!
+                  .titleMedium!
                   .copyWith(fontWeight: FontWeight.w600, wordSpacing: 1.2),
             ),
             const SizedBox(height: 15),

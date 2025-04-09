@@ -35,10 +35,10 @@ class _AlarmCardState extends State<AlarmCard> {
       confirmDismiss: (DismissDirection direction) async => true,
       onDismissed: (DismissDirection direction) =>
           _alarmContext.removeAlarm(widget.model),
-      background: Card(
+      background: const Card(
         color: Colors.black,
         child: Row(
-          children: const <Widget>[
+          children: <Widget>[
             SizedBox(width: 20),
             Icon(Icons.delete_outline, color: Colors.white),
           ],
@@ -52,7 +52,7 @@ class _AlarmCardState extends State<AlarmCard> {
                 text: alarmFormat(widget.model.at),
                 style: Theme.of(context)
                     .textTheme
-                    .headline5!
+                    .headlineSmall!
                     .copyWith(fontWeight: FontWeight.w600),
                 children: widget.model.label != null
                     ? <InlineSpan>[
@@ -60,14 +60,14 @@ class _AlarmCardState extends State<AlarmCard> {
                           text: '|',
                           style: Theme.of(context)
                               .textTheme
-                              .headline5!
+                              .headlineSmall!
                               .copyWith(fontWeight: FontWeight.w400),
                         ),
                         TextSpan(
                           text: widget.model.label,
                           style: Theme.of(context)
                               .textTheme
-                              .headline6!
+                              .titleLarge!
                               .copyWith(fontWeight: FontWeight.w400),
                         )
                       ]

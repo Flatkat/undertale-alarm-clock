@@ -35,17 +35,16 @@ class _ClockCardState extends State<ClockCard> {
       onDismissed: (DismissDirection direction) {
         _timeZoneContext.removeIndividualModel(widget.zone);
       },
-      background: Card(
+      background: const Card(
           color: Colors.black,
-          child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: const <Widget>[
-                Icon(
-                  Icons.delete_outline,
-                  color: Colors.white,
-                ),
-                SizedBox(width: 20)
-              ])),
+          child:
+              Row(mainAxisAlignment: MainAxisAlignment.end, children: <Widget>[
+            Icon(
+              Icons.delete_outline,
+              color: Colors.white,
+            ),
+            SizedBox(width: 20)
+          ])),
       key: ObjectKey(widget.zone),
       child: Card(
         borderOnForeground: false,
@@ -76,7 +75,7 @@ class _ClockCardState extends State<ClockCard> {
             getTimeFromOffset(widget.zone.offset),
             style: Theme.of(context)
                 .textTheme
-                .headline6!
+                .titleLarge!
                 .copyWith(fontWeight: FontWeight.bold, letterSpacing: 1.2),
           ),
         ),
